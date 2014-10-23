@@ -31,7 +31,7 @@ var app = {
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
+    // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
@@ -46,4 +46,31 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    
+/*
+    cordova.plugins.barcodeScanner.scan(
+			function (result) {
+			alert(result.text);
+			alert(result.cancelled);
+			},
+			function (error) {
+			alert(error);
+			}
+	);
+
+
+cordova.plugins.barcodeScanner.scan(
+      function (result) {
+          alert("We got a barcode\n" +
+                "Result: " + result.text + "\n" +
+                "Format: " + result.format + "\n" +
+                "Cancelled: " + result.cancelled);
+      }, 
+      function (error) {
+          alert("Scanning failed: " + error);
+      }
+   );
+
+    */
+
 };
